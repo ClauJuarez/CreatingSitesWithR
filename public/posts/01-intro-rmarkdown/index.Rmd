@@ -1,0 +1,25 @@
+---
+title: "Ejemplo de R Markdown: Resumen de datos"
+date: 2025-11-03
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Análisis rápido del conjunto `cars`
+
+El conjunto `cars` incluye la velocidad y distancia de frenado de autos.  
+A continuación mostramos un resumen estadístico:
+
+```{r}
+summary(cars)
+```
+
+## Visualización
+
+```{r, fig.width=6, fig.height=4}
+plot(cars, col = "steelblue", pch = 19, main = "Velocidad vs distancia de frenado")
+```
+

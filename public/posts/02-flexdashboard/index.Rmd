@@ -1,0 +1,46 @@
+---
+title: "Ejemplo de tablero con Flexdashboard"
+date: "2025-11-03"
+description: "Un ejemplo de cómo integrar un dashboard dentro de tu sitio creado con blogdown."
+output: flexdashboard::flex_dashboard
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### PIB per cápita por continente
+
+```{r}
+data <- gapminder %>% filter(year == 2007)
+
+ggplot(data, aes(continent, gdpPercap, fill = continent)) +
+  geom_col() +
+  theme_minimal() +
+  labs(
+    title = "PIB per cápita por continente (2007)",
+    x = "Continente", y = "PIB per cápita"
+  )
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Esperanza de vida
+
+```{r}
+ggplot(data, aes(continent, lifeExp, fill = continent)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    title = "Esperanza de vida por continente (2007)",
+    x = "Continente", y = "Años"
+  )
+```

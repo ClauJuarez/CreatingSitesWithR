@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://creatingwebsiteswithr.netlify.app/posts/03-comunicacion-resultados/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/posts/01-intro-rmarkdown/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/posts/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/about/</loc>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://creatingwebsiteswithr.netlify.app/tags/</loc>
+  </url>
+</urlset>

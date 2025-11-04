@@ -1,0 +1,40 @@
+---
+title: "Ejemplo de tablero con Flexdashboard"
+date: "2025-11-03"
+description: "Un ejemplo de cómo integrar un dashboard dentro de tu sitio creado con blogdown."
+output: flexdashboard::flex_dashboard
+always_allow_html: true
+---
+
+
+
+<div id="column" class="section level2" data-width="650">
+<h2>Column</h2>
+<div id="pib-per-cápita-por-continente" class="section level3">
+<h3>PIB per cápita por continente</h3>
+<pre class="r"><code>data &lt;- gapminder %&gt;% filter(year == 2007)
+
+ggplot(data, aes(continent, gdpPercap, fill = continent)) +
+  geom_col() +
+  theme_minimal() +
+  labs(
+    title = &quot;PIB per cápita por continente (2007)&quot;,
+    x = &quot;Continente&quot;, y = &quot;PIB per cápita&quot;
+  )</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+</div>
+<div id="column-1" class="section level2">
+<h2>Column</h2>
+<div id="esperanza-de-vida" class="section level3">
+<h3>Esperanza de vida</h3>
+<pre class="r"><code>ggplot(data, aes(continent, lifeExp, fill = continent)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    title = &quot;Esperanza de vida por continente (2007)&quot;,
+    x = &quot;Continente&quot;, y = &quot;Años&quot;
+  )</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+</div>

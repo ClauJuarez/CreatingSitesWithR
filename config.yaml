@@ -1,33 +1,31 @@
-baseURL: https://example.com
-title: Your title
+baseURL: "https://creatingwebsiteswithr.netlify.app/"
+title: "Publicación y presentación de resultados"
 theme: hugo-theme-m10c
 pagination:
   pagerSize: 8
 menu:
   main:
     - identifier: home
-      name: Home
+      name: Inicio
       url: /
       weight: 1
-    - identifier: tags
-      name: Tags
-      url: /tags/
+    - identifier: posts
+      name: Contenido
+      url: /posts/
       weight: 2
     - identifier: about
-      name: About
+      name: Acerca de
       url: /about/
       weight: 3
+
 params:
-  author: John Doe
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  menu_item_separator: ' - '
+  author: "Claudia Juárez"
+  description: "Material del curso sobre publicación y visualización de resultados en ciencia de datos con R."
+  menu_item_separator: " · "
   social:
     - icon: brand-github
-      name: Github
-      url: https://github.com/gohugoio
+      name: GitHub
+      url: "https://github.com/claujrz"
     - icon: brand-x
       name: X
-      url: https://twitter.com/gohugoio
-    - icon: brand-mastodon
-      name: Twitter
-      url: https://twitter.com/gohugoio
+      url: "https://twitter.com/"

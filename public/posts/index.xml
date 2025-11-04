@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Publicación y presentación de resultados</title>
+    <link>https://creatingwebsiteswithr.netlify.app/posts/</link>
+    <description>Recent content in Posts on Publicación y presentación de resultados</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://creatingwebsiteswithr.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comunicación de resultados</title>
+      <link>https://creatingwebsiteswithr.netlify.app/posts/03-comunicacion-resultados/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://creatingwebsiteswithr.netlify.app/posts/03-comunicacion-resultados/</guid>
+      <description>&lt;p&gt;La visualización efectiva y la narrativa son esenciales para comunicar resultados.&lt;br&gt;&#xA;Algunas recomendaciones:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Define el público objetivo.&lt;/li&gt;&#xA;&lt;li&gt;Usa gráficos claros y consistentes.&lt;/li&gt;&#xA;&lt;li&gt;Contextualiza tus hallazgos con texto breve.&lt;/li&gt;&#xA;&lt;li&gt;Publica el resultado en un sitio o dashboard accesible.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“No basta con tener buenos resultados, hay que saber contarlos.”&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Ejemplo de R Markdown: Resumen de datos</title>
+      <link>https://creatingwebsiteswithr.netlify.app/posts/01-intro-rmarkdown/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://creatingwebsiteswithr.netlify.app/posts/01-intro-rmarkdown/</guid>
+      <description>&lt;div id=&#34;análisis-rápido-del-conjunto-cars&#34; class=&#34;section level2&#34;&gt;&#xA;&lt;h2&gt;Análisis rápido del conjunto &lt;code&gt;cars&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;El conjunto &lt;code&gt;cars&lt;/code&gt; incluye la velocidad y distancia de frenado de autos.&lt;br /&gt;&#xA;A continuación mostramos un resumen estadístico:&lt;/p&gt;&#xA;&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;pre&gt;&lt;code&gt;##      speed           dist       &#xA;##  Min.   : 4.0   Min.   :  2.00  &#xA;##  1st Qu.:12.0   1st Qu.: 26.00  &#xA;##  Median :15.0   Median : 36.00  &#xA;##  Mean   :15.4   Mean   : 42.98  &#xA;##  3rd Qu.:19.0   3rd Qu.: 56.00  &#xA;##  Max.   :25.0   Max.   :120.00&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;visualización&#34; class=&#34;section level2&#34;&gt;&#xA;&lt;h2&gt;Visualización&lt;/h2&gt;&#xA;&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(cars, col = &amp;quot;steelblue&amp;quot;, pch = 19, main = &amp;quot;Velocidad vs distancia de frenado&amp;quot;)&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://creatingwebsiteswithr.netlify.app/posts/01-intro-rmarkdown/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ejemplo de tablero con Flexdashboard</title>
+      <link>https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/</guid>
+      <description>&lt;div id=&#34;column&#34; class=&#34;section level2&#34; data-width=&#34;650&#34;&gt;&#xA;&lt;h2&gt;Column&lt;/h2&gt;&#xA;&lt;div id=&#34;pib-per-cápita-por-continente&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;PIB per cápita por continente&lt;/h3&gt;&#xA;&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- gapminder %&amp;gt;% filter(year == 2007)&#xA;&#xA;ggplot(data, aes(continent, gdpPercap, fill = continent)) +&#xA;  geom_col() +&#xA;  theme_minimal() +&#xA;  labs(&#xA;    title = &amp;quot;PIB per cápita por continente (2007)&amp;quot;,&#xA;    x = &amp;quot;Continente&amp;quot;, y = &amp;quot;PIB per cápita&amp;quot;&#xA;  )&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;column-1&#34; class=&#34;section level2&#34;&gt;&#xA;&lt;h2&gt;Column&lt;/h2&gt;&#xA;&lt;div id=&#34;esperanza-de-vida&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Esperanza de vida&lt;/h3&gt;&#xA;&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(continent, lifeExp, fill = continent)) +&#xA;  geom_boxplot() +&#xA;  theme_minimal() +&#xA;  labs(&#xA;    title = &amp;quot;Esperanza de vida por continente (2007)&amp;quot;,&#xA;    x = &amp;quot;Continente&amp;quot;, y = &amp;quot;Años&amp;quot;&#xA;  )&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
