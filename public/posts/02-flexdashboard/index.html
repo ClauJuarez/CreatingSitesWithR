@@ -26,6 +26,9 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-03T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-11-03T00:00:00+00:00">
+    <meta property="article:tag" content="Flexdashboard">
+    <meta property="article:tag" content="Visualización">
+    <meta property="article:tag" content="R">
 
 
   </head>
@@ -69,17 +72,37 @@
           <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           1 min read
         </div>
+        <div>
+          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <a class="tag" href="/tags/flexdashboard/">Flexdashboard</a>
+              <a class="tag" href="/tags/visualizaci%C3%B3n/">Visualización</a>
+              <a class="tag" href="/tags/r/">R</a>
+        </div>
       </div>
     </header>
     <div class="post-content">
       
 
 
-<div id="column" class="section level2" data-width="650">
-<h2>Column</h2>
-<div id="pib-per-cápita-por-continente" class="section level3">
-<h3>PIB per cápita por continente</h3>
-<pre class="r"><code>data &lt;- gapminder %&gt;% filter(year == 2007)
+<p>En esta entrada mostramos cómo crear un tablero interactivo con <strong>Flexdashboard</strong>.</p>
+<p>El siguiente botón te llevará al tablero completo, donde podrás explorar las gráficas generadas en R.</p>
+<p><a href="/dashboard/02-flexdashboard.html">Ver el dashboard interactivo →</a></p>
+<hr />
+<pre class="r"><code># Código utilizado para generar el dashboard:
+rmarkdown::render(&quot;content/posts/02-flexdashboard/02-flexdashboard.Rmd&quot;,
+                  output_dir = &quot;static/dashboard&quot;)
+
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### PIB per cápita por continente
+
+data &lt;- gapminder %&gt;% filter(year == 2007)
 
 ggplot(data, aes(continent, gdpPercap, fill = continent)) +
   geom_col() +
@@ -87,24 +110,20 @@ ggplot(data, aes(continent, gdpPercap, fill = continent)) +
   labs(
     title = &quot;PIB per cápita por continente (2007)&quot;,
     x = &quot;Continente&quot;, y = &quot;PIB per cápita&quot;
-  )</code></pre>
-<p><img src="https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-</div>
-</div>
-<div id="column-1" class="section level2">
-<h2>Column</h2>
-<div id="esperanza-de-vida" class="section level3">
-<h3>Esperanza de vida</h3>
-<pre class="r"><code>ggplot(data, aes(continent, lifeExp, fill = continent)) +
+  )
+
+Column
+-----------------------------------------------------------------------
+
+### Esperanza de vida
+
+ggplot(data, aes(continent, lifeExp, fill = continent)) +
   geom_boxplot() +
   theme_minimal() +
   labs(
     title = &quot;Esperanza de vida por continente (2007)&quot;,
     x = &quot;Continente&quot;, y = &quot;Años&quot;
   )</code></pre>
-<p><img src="https://creatingwebsiteswithr.netlify.app/posts/02-flexdashboard/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
-</div>
 
     </div>
     <div class="post-footer">
