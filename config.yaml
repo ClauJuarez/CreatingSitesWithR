@@ -1,0 +1,33 @@
+baseURL: https://example.com
+title: Your title
+theme: hugo-theme-m10c
+pagination:
+  pagerSize: 8
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 2
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 3
+params:
+  author: John Doe
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  menu_item_separator: ' - '
+  social:
+    - icon: brand-github
+      name: Github
+      url: https://github.com/gohugoio
+    - icon: brand-x
+      name: X
+      url: https://twitter.com/gohugoio
+    - icon: brand-mastodon
+      name: Twitter
+      url: https://twitter.com/gohugoio
