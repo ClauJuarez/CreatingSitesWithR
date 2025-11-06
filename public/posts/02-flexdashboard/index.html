@@ -81,50 +81,47 @@
       </div>
     </header>
     <div class="post-content">
-      
-
-
-<p>En esta entrada mostramos cómo crear un tablero interactivo con <strong>Flexdashboard</strong>.</p>
+      <p>En esta entrada mostramos cómo crear un tablero interactivo con <strong>Flexdashboard</strong>.</p>
 <p>El siguiente botón te llevará al tablero completo, donde podrás explorar las gráficas generadas en R.</p>
-<p><a href="/dashboard/02-flexdashboard.html">Ver el dashboard interactivo →</a></p>
-<hr />
-<pre class="r"><code># Código utilizado para generar el dashboard:
-rmarkdown::render(&quot;content/posts/02-flexdashboard/02-flexdashboard.Rmd&quot;,
-                  output_dir = &quot;static/dashboard&quot;)
-
-library(flexdashboard)
-library(ggplot2)
-library(dplyr)
-library(gapminder)
-
-Column {data-width=650}
------------------------------------------------------------------------
-
-### PIB per cápita por continente
-
-data &lt;- gapminder %&gt;% filter(year == 2007)
-
-ggplot(data, aes(continent, gdpPercap, fill = continent)) +
-  geom_col() +
-  theme_minimal() +
-  labs(
-    title = &quot;PIB per cápita por continente (2007)&quot;,
-    x = &quot;Continente&quot;, y = &quot;PIB per cápita&quot;
-  )
-
-Column
------------------------------------------------------------------------
-
-### Esperanza de vida
-
-ggplot(data, aes(continent, lifeExp, fill = continent)) +
-  geom_boxplot() +
-  theme_minimal() +
-  labs(
-    title = &quot;Esperanza de vida por continente (2007)&quot;,
-    x = &quot;Continente&quot;, y = &quot;Años&quot;
-  )</code></pre>
-
+<p><a href="/dashboard/riesgo_default.html">Ver el dashboard interactivo →</a></p>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># Código utilizado para generar el dashboard:</span>
+</span></span><span style="display:flex;"><span>rmarkdown<span style="color:#f92672">::</span><span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;content/posts/02-flexdashboard/02-flexdashboard.Rmd&#34;</span>,
+</span></span><span style="display:flex;"><span>                  output_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;static/dashboard&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(flexdashboard)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(ggplot2)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dplyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(gapminder)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Column {data<span style="color:#f92672">-</span>width<span style="color:#f92672">=</span><span style="color:#ae81ff">650</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-----------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### PIB per cápita por continente</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> gapminder <span style="color:#f92672">%&gt;%</span> <span style="color:#a6e22e">filter</span>(year <span style="color:#f92672">==</span> <span style="color:#ae81ff">2007</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data, <span style="color:#a6e22e">aes</span>(continent, gdpPercap, fill <span style="color:#f92672">=</span> continent)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_col</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme_minimal</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PIB per cápita por continente (2007)&#34;</span>,
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Continente&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PIB per cápita&#34;</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Column
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-----------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Esperanza de vida</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(data, <span style="color:#a6e22e">aes</span>(continent, lifeExp, fill <span style="color:#f92672">=</span> continent)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_boxplot</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme_minimal</span>() <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Esperanza de vida por continente (2007)&#34;</span>,
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Continente&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Años&#34;</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div>
     </div>
     <div class="post-footer">
       
