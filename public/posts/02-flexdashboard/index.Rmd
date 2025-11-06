@@ -9,7 +9,7 @@ En esta entrada mostramos cómo crear un tablero interactivo con **Flexdashboard
 
 El siguiente botón te llevará al tablero completo, donde podrás explorar las gráficas generadas en R.
 
-[Ver el dashboard interactivo →](/dashboard/02-flexdashboard.html)
+[Ver el dashboard interactivo →](/dashboard/riesgo_default.html)
 
 ---
 
