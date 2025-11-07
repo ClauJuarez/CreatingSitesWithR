@@ -20,6 +20,7 @@ menu:
 
 params:
   author: "Claudia Juárez"
+  avatar: "images.jpeg"
   description: "Material del curso sobre publicación y visualización de resultados en ciencia de datos con R."
   menu_item_separator: " · "
   social:
